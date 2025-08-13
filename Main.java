@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String args[]){
-        int[] numbers = {10,9,8,7,6,5,4,3,2,1};
-        BubbleSorting b = new BubbleSorting();
+        int[] numbers = {10,9,8,7};
+//        BubbleSorting a = new BubbleSorting();;
+//        a.sort(numbers);
+        SelectionSorting b = new SelectionSorting();
         b.sort(numbers);
     }
 }

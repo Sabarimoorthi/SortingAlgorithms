@@ -1,16 +1,27 @@
 public class BubbleSorting {
-    public void sort(int[] numbers){
-        for(int i=0;i<numbers.length;i++){
-            for(int j=i+1;j<numbers.length;j++){
-                if(numbers[i]>numbers[j]){
-                    int temp = numbers[i];
-                    numbers[i]=numbers[j];
-                    numbers[j]=temp;
+    public void sort(int[] arr){
+        boolean swapped;
+        for(int i=0;i<arr.length-1;i++){
+            swapped = false;
+            for(int j=0;j<arr.length-i-1;j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    swapped = true;
                 }
             }
+            if(!swapped){
+                break;
+            }
         }
-        for(int number:numbers){
-            System.out.println(number);
+        displaySortedArray(arr);
+    }
+    public void displaySortedArray(int[] arr){
+        System.out.println("Result of Bubble sorting");
+        for(int a:arr){
+            System.out.print(a +" ");
         }
+        System.out.println();
     }
 }
